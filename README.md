@@ -2,7 +2,7 @@
 
 ## Sobre
 
-Olá, eu sou a Luana e estou aprendendo Git e GitHub.
+Olá, eu sou a **Luana Cristina** e estou aprendendo *Git e GitHub*.
 
 Se voce desejar saber mais sobre mim, pode acessar [meu site](www.otaciliomaia.com)
 
@@ -10,3 +10,11 @@ Se voce desejar saber mais sobre mim, pode acessar [meu site](www.otaciliomaia.c
 
 - Git e GitHub
 - Desenvolvimento Web
+
+## Linguagens de programação que gosto 
+
+### Java Script
+
+Gosto muito e trabalho com JavaScritp há 2 anos.
+
+### Listar o que desejarmos.
