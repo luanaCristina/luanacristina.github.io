@@ -1,15 +1,12 @@
-#Este é o meu primeiro repositorio git.
-Meu nome é Luana Cristina
+# Luana Cristina
 
-minha profissão é de engenheira de teste
+## Sobre
 
-Neste repositorio coloquei o meu portifolio de desenvolvedor.
+Olá, eu sou a Luana e estou aprendendo Git e GitHub.
 
-Agora eu quero falar mais sobre mim, e o que eu quero falar é que 
-eu tinha esquecido de falar o que eu queria falar
+Se voce desejar saber mais sobre mim, pode acessar [meu site](www.otaciliomaia.com)
 
-## Existe um arquivo com a lista de linguagens que programo
+## Cursos do Platzi que Otacilio fez
 
-As minhas experimentações 
-
-Resolvi um bug que tinha nessa linha
+- Git e GitHub
+- Desenvolvimento Web
