@@ -4,12 +4,12 @@
 
 Olá, eu sou a **Luana Cristina** e estou aprendendo *Git e GitHub*.
 
-Se voce desejar saber mais sobre mim, pode acessar [meu site](www.otaciliomaia.com)
+Se voce desejar saber mais sobre mim, pode acessar [meu Google Drive](https://drive.google.com/drive/folders/1qgokwgkmscF17Hwbz1RUZdPcvW19Ufj3?usp=sharing)
 
-## Cursos do Platzi que Otacilio fez
+## Cursos ou tutoriais que fiz
 
-- Git e GitHub
-- Desenvolvimento Web
+- Data Warehousing com ferramentas Microsoft
+- Análise dos dados Acidentes de Trânsitos do Recife com Pentaho.
 
 ## Linguagens de programação que gosto 
 
