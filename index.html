@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luana Cristina | Quality Analyst & Tech Educator</title>
+    <meta name="description" content="Luana Cristina - Quality Analyst Consultant at Thoughtworks, Teacher, Women Techmakers Ambassador">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #030d22;
+            --bg-secondary: #0a1628;
+            --bg-card: #0d1f3c;
+            --neon-cyan: #00ff9c;
+            --neon-magenta: #ff4081;
+            --neon-purple: #c592ff;
+            --neon-yellow: #fcee09;
+            --neon-blue: #0ff0fc;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0b0c0;
+            --border-glow: rgba(0, 255, 156, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Background Grid */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(0, 255, 156, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 156, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(3, 13, 34, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-glow);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 8px var(--neon-cyan);
+        }
+
+        /* Sections */
+        section {
+            position: relative;
+            z-index: 1;
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 5rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--neon-cyan);
+            box-shadow: 0 0 30px rgba(0, 255, 156, 0.4), inset 0 0 30px rgba(0, 255, 156, 0.1);
+            margin-bottom: 2rem;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--neon-cyan);
+            text-shadow: 0 0 20px rgba(0, 255, 156, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            color: var(--neon-magenta);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(255, 64, 129, 0.4);
+        }
+
+        .hero .tagline {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .badge {
+            padding: 0.4rem 1rem;
+            border: 1px solid var(--neon-purple);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--neon-purple);
+            background: rgba(197, 146, 255, 0.1);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 15px var(--neon-cyan);
+            transform: translateY(-3px);
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            color: var(--neon-yellow);
+            text-shadow: 0 0 15px rgba(252, 238, 9, 0.4);
+            margin-bottom: 3rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-yellow), transparent);
+            margin: 1rem auto 0;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 255, 156, 0.15);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 20px rgba(0, 255, 156, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-cyan);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card .institution {
+            color: var(--neon-magenta);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .card .period {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--neon-purple);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card p, .card li {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .card ul {
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .card li {
+            margin-bottom: 0.3rem;
+        }
+
+        .highlight-card {
+            border-color: var(--neon-magenta);
+            background: linear-gradient(135deg, var(--bg-card), rgba(255, 64, 129, 0.05));
+        }
+
+        .highlight-card:hover {
+            border-color: var(--neon-magenta);
+            box-shadow: 0 0 25px rgba(255, 64, 129, 0.2);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-category h4 {
+            font-family: 'Orbitron', monospace;
+            color: var(--neon-blue);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.3rem 0.8rem;
+            background: rgba(15, 240, 252, 0.08);
+            border: 1px solid rgba(15, 240, 252, 0.3);
+            border-radius: 4px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--neon-blue);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--neon-cyan), var(--neon-magenta), var(--neon-purple));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--neon-cyan);
+            box-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        /* Certificate Section */
+        .certificate-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .certificate-img {
+            max-width: 500px;
+            width: 100%;
+            border: 2px solid var(--neon-purple);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(197, 146, 255, 0.3);
+        }
+
+        .certificate-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Metrics */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .metric-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid rgba(252, 238, 9, 0.2);
+            border-radius: 8px;
+        }
+
+        .metric-card .number {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neon-yellow);
+            text-shadow: 0 0 10px rgba(252, 238, 9, 0.5);
+        }
+
+        .metric-card .label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-glow);
+            position: relative;
+            z-index: 1;
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        footer .neon-text {
+            color: var(--neon-cyan);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .certificate-container {
+                flex-direction: column;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Glitch animation */
+        @keyframes glitch {
+            0%, 100% { text-shadow: 0 0 20px rgba(0, 255, 156, 0.5); }
+            25% { text-shadow: -2px 0 var(--neon-magenta), 2px 0 var(--neon-cyan); }
+            50% { text-shadow: 0 0 20px rgba(0, 255, 156, 0.5); }
+            75% { text-shadow: 2px 0 var(--neon-magenta), -2px 0 var(--neon-cyan); }
+        }
+
+        .glitch-hover:hover {
+            animation: glitch 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">LC://</div>
+            <ul>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#education">Formação</a></li>
+                <li><a href="#experience">Experiência</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#talks">Palestras</a></li>
+                <li><a href="#metrics">Métricas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <img src="https://avatars.githubusercontent.com/u/17659923?v=4" alt="Luana Cristina" class="hero-avatar">
+            <h1 class="glitch-hover">Luana Cristina</h1>
+            <p class="subtitle">Quality Analyst Consultant | Tech Educator | Speaker</p>
+            <p class="tagline">> 15+ anos em TI | Thoughtworks | Women Techmakers Ambassador</p>
+            
+            <div class="hero-badges">
+                <span class="badge">QA Enabler</span>
+                <span class="badge">E2E Automation</span>
+                <span class="badge">GenAI Delivery</span>
+                <span class="badge">Cloud & Observability</span>
+                <span class="badge">BI & Data</span>
+                <span class="badge">Teacher</span>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/luanaCristina" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/luanacristinaas" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:luanacrystinne@msn.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">// Sobre Mim</h2>
+            <div class="card">
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    Sou uma entusiasta de tecnologia que acredita no poder do software para transformar o mundo. 
+                    Com <strong style="color: var(--neon-cyan);">15+ anos de experiência em TI</strong>, construí uma carreira sólida e diversa 
+                    que inclui desenvolvimento de software, business intelligence, ensino e meu papel atual como 
+                    <strong style="color: var(--neon-magenta);">Quality Analyst Consultant na Thoughtworks</strong>.
+                </p>
+                <br>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    Minha paixão por garantir a qualidade de software me impulsiona a buscar excelência através de uma 
+                    abordagem holística. Sou igualmente habilidosa em execução prática — testes exploratórios manuais 
+                    críticos para garantir qualidade centrada no usuário e construção de automação de testes direcionada.
+                </p>
+                <br>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    Além da tecnologia, sou apaixonada por aprender, ensinar e compartilhar conhecimento. 
+                    Sou <strong style="color: var(--neon-purple);">Women Techmakers Ambassador</strong> e busco inspirar outras pessoas 
+                    a seguirem seus sonhos na área de tech.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section (Emphasis) -->
+    <section id="education" style="background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));">
+        <div class="container">
+            <h2 class="section-title">// Formação Acadêmica</h2>
+
+            <!-- Highlight: Residência CIn-UFPE -->
+            <div class="card highlight-card">
+                <h3>🎓 Especialização em Residência em Desenvolvimento de Software</h3>
+                <p class="institution">Centro de Informática — Universidade Federal de Pernambuco (CIn-UFPE)</p>
+                <p class="period">Outubro 2020 — Março 2022</p>
+                <p>Programa de pós-graduação intensivo com treinamento hands-on em ambiente corporativo real (EMPREL), 
+                   fazendo a ponte entre conhecimento acadêmico e prática na indústria.</p>
+                <ul>
+                    <li><strong style="color: var(--neon-cyan);">Projeto Final:</strong> "Análise do Processo de Teste e Como Implementar Melhorias no Ambiente EMPREL"</li>
+                    <li><strong style="color: var(--neon-cyan);">Orientador:</strong> Prof. Leopoldo Motta Teixeira</li>
+                    <li><strong style="color: var(--neon-cyan);">Financiamento:</strong> Bolsa integral da FADE-UFPE</li>
+                    <li><strong style="color: var(--neon-cyan);">Stack:</strong> PHP, Symfony, Java, Kotlin, Selenium, JUnit5, UX/UI, Testing Tools, QA</li>
+                </ul>
+            </div>
+
+            <!-- Pós em Teologia -->
+            <div class="card">
+                <h3>📖 Pós-Graduação Lato Sensu em Teologia e Aconselhamento</h3>
+                <p class="institution">Instituto Reformado de São Paulo</p>
+                <p class="period">2024 — 2026</p>
+                <p>Programa focado em desenvolvimento de habilidades teóricas e práticas em aconselhamento, 
+                   com competência-chave em <strong style="color: var(--neon-purple);">Resolução de Conflitos</strong>.</p>
+            </div>
+
+            <!-- MBA BI -->
+            <div class="card">
+                <h3>📊 MBA em Análise de Business Intelligence</h3>
+                <p class="institution">Instituto de Gestão e Tecnologia da Informação (IGTI) — Belo Horizonte</p>
+                <p class="period">Junho 2017 — Dezembro 2020</p>
+                <p>Planejamento estratégico de BI, gestão de dados & ETL, análise de dados & insights, 
+                   visualização e comunicação com stakeholders.</p>
+            </div>
+
+            <!-- Mestrado (aluna especial) -->
+            <div class="card">
+                <h3>🔬 Disciplinas de Mestrado (Aluna Especial)</h3>
+                <p class="institution">Escola Politécnica — Universidade de Pernambuco (POLI-UPE)</p>
+                <p class="period">2017 — 2019</p>
+                <p>Disciplinas cursadas: Requisitos de Software, Engenharia de Software Experimental, Inteligência Computacional.</p>
+            </div>
+
+            <!-- Pós Eng Software -->
+            <div class="card">
+                <h3>💻 Pós-Graduação em Engenharia de Software</h3>
+                <p class="institution">Faculdade de Tecnologia Ibratec (Unibratec) — Recife</p>
+                <p class="period">Maio 2015 — Junho 2017</p>
+                <p>Gestão do ciclo de vida completo do SDLC, metodologias ágeis (Scrum, Kanban), arquitetura de software e garantia de qualidade.</p>
+            </div>
+
+            <!-- Bacharelado SI -->
+            <div class="card">
+                <h3>🎯 Bacharelado em Sistemas de Informação</h3>
+                <p class="institution">Centro Universitário Maurício de Nassau (UNINASSAU) — Recife</p>
+                <p class="period">Janeiro 2008 — Dezembro 2011</p>
+                <p>Análise de sistemas, desenvolvimento de software, gestão de banco de dados e gerenciamento de projetos de TI.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">// Experiência Profissional</h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Quality Analyst Consultant</h3>
+                        <p class="institution">Thoughtworks</p>
+                        <p class="period">Abril 2022 — Presente (4+ anos)</p>
+                        <p><strong style="color: var(--neon-cyan);">Projeto Atual:</strong> Natura Pay — Tribo BolePix (QA Enabler & Quality Specialist)</p>
+                        <ul>
+                            <li>Definição e implementação de estratégias de qualidade alinhadas com princípios Agile e DevOps</li>
+                            <li>Manutenção de suítes de automação BDD com 185+ cenários E2E passing</li>
+                            <li>Mentoria e onboarding de novos QA engineers</li>
+                            <li>Integração de quality gates em CI/CD para entrega contínua</li>
+                            <li>Gestão de métricas de qualidade com SonarQube, Datadog e dashboards customizados</li>
+                            <li>Piloto de IA generativa (Kiro) para aceleração de desenvolvimento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Professora do Curso de Desenvolvimento de Sistemas</h3>
+                        <p class="institution">Secretaria de Educação do Estado de Pernambuco — ETE Ginásio Pernambucano</p>
+                        <p class="period">Agosto 2021 — Julho 2024 (3 anos)</p>
+                        <p>Ensino presencial de 13 disciplinas técnicas incluindo: Design Centrado no Usuário, 
+                           Programação Web, Desktop e Mobile, Lógica Computacional, Análise de Dados com Pentaho e Projetos Integradores.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Residente em Desenvolvimento de Software</h3>
+                        <p class="institution">Centro de Informática UFPE — EMPREL</p>
+                        <p class="period">Outubro 2020 — Março 2022</p>
+                        <p>Programa de residência com aplicação prática em projetos reais na EMPREL. Stack: PHP, Doctrine, Symfony, Java, Kotlin, Selenium, JUnit5.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Test Engineer</h3>
+                        <p class="institution">FADE-UFPE — Projeto Samsung (CIn/UFPE)</p>
+                        <p class="period">Dezembro 2018 — Setembro 2019</p>
+                        <p>Criação e execução de testes funcionais, exploratórios, smoke e outline para o projeto Samsung.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Analista de TI Sênior</h3>
+                        <p class="institution">SEFAD-Olinda (Alocada)</p>
+                        <p class="period">Junho 2017 — Novembro 2018</p>
+                        <p>ETL, Data Warehouse, modelagem dimensional com Power Architect, cubos OLAP com Pentaho e disponibilização via Saiku/BI Server.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="card">
+                        <h3>Sr Quality Assurance Software Tester / Senior Consultant</h3>
+                        <p class="institution">Accenture Brasil</p>
+                        <p class="period">Janeiro 2012 — Janeiro 2016 (4 anos)</p>
+                        <p>Testes SOA com SOAPUI, gestão de defeitos, testes de regressão e integração, liderança de equipe de Reconciliação com 4 pessoas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));">
+        <div class="container">
+            <h2 class="section-title">// Tech Stack & Skills</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category card">
+                    <h4><i class="fas fa-vial"></i> Test Automation & QA</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Cypress</span>
+                        <span class="skill-tag">Karate</span>
+                        <span class="skill-tag">Cucumber/BDD</span>
+                        <span class="skill-tag">Jest</span>
+                        <span class="skill-tag">JUnit5</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Zephyr Scale</span>
+                        <span class="skill-tag">QMetry</span>
+                        <span class="skill-tag">Artillery</span>
+                    </div>
+                </div>
+
+                <div class="skill-category card">
+                    <h4><i class="fas fa-code"></i> Languages & Frameworks</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                    </div>
+                </div>
+
+                <div class="skill-category card">
+                    <h4><i class="fas fa-cloud"></i> Cloud & Observability</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS Lambda</span>
+                        <span class="skill-tag">DynamoDB</span>
+                        <span class="skill-tag">SQS/SNS</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">Datadog</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="skill-category card">
+                    <h4><i class="fas fa-database"></i> Data & BI</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">Pentaho PDI</span>
+                        <span class="skill-tag">ETL</span>
+                        <span class="skill-tag">Data Warehouse</span>
+                        <span class="skill-tag">Saiku</span>
+                        <span class="skill-tag">Power Architect</span>
+                    </div>
+                </div>
+
+                <div class="skill-category card">
+                    <h4><i class="fas fa-project-diagram"></i> Management & Methods</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Confluence</span>
+                        <span class="skill-tag">Scrum</span>
+                        <span class="skill-tag">Kanban</span>
+                        <span class="skill-tag">SonarQube</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                    </div>
+                </div>
+
+                <div class="skill-category card">
+                    <h4><i class="fas fa-robot"></i> AI & Innovation</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kiro (AI IDE)</span>
+                        <span class="skill-tag">Spec-Driven Dev</span>
+                        <span class="skill-tag">GenAI Delivery</span>
+                        <span class="skill-tag">AI Tooling</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Talks & Certificate Section -->
+    <section id="talks">
+        <div class="container">
+            <h2 class="section-title">// Palestras & Certificados</h2>
+
+            <div class="certificate-container">
+                <img src="certificado-esquenta-recife-luana.png" alt="Certificado TDC Recife 2026" class="certificate-img">
+                <div class="certificate-info">
+                    <div class="card highlight-card">
+                        <h3>🎤 Esquenta TDC AI — Recife 2026</h3>
+                        <p class="institution">TDC Stage Recife + REC'n'Play</p>
+                        <p class="period">10 de Junho de 2026</p>
+                        <br>
+                        <p style="font-size: 1.1rem;"><strong style="color: var(--neon-yellow);">Palestra:</strong> 
+                        "E se o QA pudesse ler o Jira, o Confluence e o código ao mesmo tempo? Com Kiro, pode."</p>
+                        <br>
+                        <p>Palestra ministrada na Thoughtworks Recife sobre como a ferramenta Kiro de IA generativa 
+                           pode transformar o trabalho do QA, integrando leitura simultânea de múltiplas fontes de informação 
+                           para acelerar análise e automação de testes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <h3 style="font-family: 'Orbitron', monospace; color: var(--neon-blue); margin-bottom: 1.5rem; text-align: center;">Certificações & Cursos</h3>
+            
+            <div class="skills-grid">
+                <div class="card">
+                    <h3 style="font-size: 0.95rem;">🇪🇸 Lengua Española — Enforex Madrid</h3>
+                    <p class="period">2026 — Nivel A1 Concluído (80h)</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size: 0.95rem;">🤖 AI for Project Management</h3>
+                    <p class="period">2025 — Alura + FIAP (Thoughtworks)</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size: 0.95rem;">💬 Crucial Conversations® — Mastering Dialogue</h3>
+                    <p class="period">2025 — Crucial Learning (Thoughtworks)</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size: 0.95rem;">🇬🇧 English Path London — Upper Intermediate B2</h3>
+                    <p class="period">2024</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size: 0.95rem;">📊 Guiding Data Mesh Lean Transformations</h3>
+                    <p class="period">2025 — Caroli.org</p>
+                </div>
+                <div class="card">
+                    <h3 style="font-size: 0.95rem;">👩‍🏫 Leadership Communication & Corporate Negotiation</h3>
+                    <p class="period">2025 — Alura + FIAP (Thoughtworks)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section id="metrics" style="background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));">
+        <div class="container">
+            <h2 class="section-title">// Métricas de Impacto 2026</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+                Dados consolidados do ciclo de performance — Tribo Bolepix (Natura &Co)
+            </p>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="number">230+</div>
+                    <div class="label">Commits em Repositórios</div>
+                </div>
+                <div class="metric-card">
+                    <div class="number">63</div>
+                    <div class="label">Pull Requests Mergeadas</div>
+                </div>
+                <div class="metric-card">
+                    <div class="number">185+</div>
+                    <div class="label">Cenários E2E Passing</div>
+                </div>
+                <div class="metric-card">
+                    <div class="number">98k+</div>
+                    <div class="label">Linhas de Código</div>
+                </div>
+                <div class="metric-card">
+                    <div class="number">33</div>
+                    <div class="label">Cards Tech Debt Criados</div>
+                </div>
+                <div class="metric-card">
+                    <div class="number">11</div>
+                    <div class="label">Guias Técnicos Publicados</div>
+                </div>
+                <div class="metric-card">
+                    <div class="number">12</div>
+                    <div class="label">Squads Beneficiadas</div>
+                </div>
+                <div class="metric-card">
+                    <div class="number">154</div>
+                    <div class="label">Repositórios no GitHub</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community & Volunteer -->
+    <section id="community">
+        <div class="container">
+            <h2 class="section-title">// Comunidade & Voluntariado</h2>
+            
+            <div class="skills-grid">
+                <div class="card">
+                    <h3>🌐 Women Techmakers Ambassador</h3>
+                    <p class="period">Agosto 2023 — Presente</p>
+                    <p>Liderança em comunidade tech feminina através de eventos, palestras, criação de conteúdo e mentoria.</p>
+                </div>
+                <div class="card">
+                    <h3>👩‍💻 Lead — Women Who Code Recife</h3>
+                    <p class="period">Fevereiro 2020 — Abril 2024</p>
+                    <p>Ensino de análise de dados com Pentaho e suporte ao time com questões de QA e desenvolvimento.</p>
+                </div>
+                <div class="card">
+                    <h3>👩‍🏫 Mentora — Tech Woman 3ª Edição</h3>
+                    <p class="period">2025 — Recife Expo Center</p>
+                    <p>Mentoria para mulheres em tecnologia durante evento presencial.</p>
+                </div>
+                <div class="card">
+                    <h3>📚 Autora — eBook "Meu primeiro ETL com Pentaho"</h3>
+                    <p class="period">Publicado na Amazon</p>
+                    <p>Livro introdutório sobre ETL utilizando Pentaho PDI (Kettle).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Desenvolvido com <span class="neon-text">♥</span> por Luana Cristina — 2026</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+            <span class="neon-text">Theme inspired by Cyberpunk 2077</span> | 
+            Powered by GitHub Pages
+        </p>
+    </footer>
+</body>
+</html>
